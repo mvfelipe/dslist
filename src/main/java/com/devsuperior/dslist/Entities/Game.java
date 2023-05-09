@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_name")
+@Table(name = "tb_game")
 public class Game {
 	
 	@Id
@@ -18,13 +18,17 @@ public class Game {
 	private long id;
 	private String title;
 	
-	@Column(name = "game_yers")
+	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
 	private String platforms;
 	private double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	public Game() {
